@@ -28,6 +28,8 @@ h1{font-size:2rem !important}
 .tuning-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
 .tuning-year{font-family:GeistMonoLocal,ui-monospace,monospace;font-size:1rem;font-weight:700;color:#dc2626}
 .tuning-name{font-size:1.5rem;font-weight:700;color:#f5f5f5;margin:0 0 4px}
+.album-wiki-link{color:inherit;text-decoration:none}
+.album-wiki-link:hover{text-decoration:underline;color:#dc2626}
 .tuning-strings{font-family:GeistMonoLocal,ui-monospace,monospace;font-size:.875rem;color:#71717a;text-transform:uppercase;letter-spacing:.05em;margin:0 0 16px}
 .tuning-meta{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px}
 .tuning-meta-label{font-family:GeistMonoLocal,ui-monospace,monospace;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#71717a;display:block;margin-bottom:4px}
@@ -45,13 +47,14 @@ h1{font-size:2rem !important}
 </style></head>
 <style>
 .album-year-block{flex:0 0 220px;background:#151517;border:1px solid #2a2a2e;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:20px;border-color:#2a2a2e;transition:border-color .2s,background-color .2s}
+.album-cover{width:96px;height:96px;object-fit:cover;border-radius:8px;margin-bottom:4px;box-shadow:0 4px 12px rgba(0,0,0,.4)}
 .tuning-card:hover .album-year-block{border-color:#dc2626;background:#1a1315}
 .album-year-big{font-family:GeistMonoLocal,ui-monospace,monospace;font-size:2.5rem;font-weight:700;color:#dc2626;line-height:1}
 .album-strings{font-family:GeistMonoLocal,ui-monospace,monospace;font-size:.8125rem;color:#8a8a8e;text-transform:uppercase;letter-spacing:.05em}
-@media(max-width:640px){.album-year-block{flex:none;flex-direction:row;justify-content:space-between;padding:14px 18px}.album-year-big{font-size:1.75rem}}
+@media(max-width:640px){.album-year-block{flex:none;flex-direction:row;justify-content:space-between;padding:14px 18px}.album-cover{width:44px;height:44px;margin-bottom:0}.album-year-big{font-size:1.75rem}}
 </style>
 <body class="min-h-screen bg-background text-foreground"><div class="min-h-screen bg-background text-foreground">
-<header class="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md"><div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:px-8"><a class="flex items-center gap-2.5" href="index.html"><span class="flex size-7 items-center justify-center rounded-sm bg-primary font-mono text-sm font-bold text-primary-foreground">SC</span><span class="font-mono text-sm font-medium tracking-tight">ESP Archive</span></a><nav class="hidden items-center gap-7 lg:flex"><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="index.html#guitarras">Guitarras</a><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="discografia.html">Discografía</a><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="cronologia.html">Cronología</a><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="afinaciones.html">Afinaciones</a><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="rig-bible.html">Rig Bible</a><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="vault.html">Vault</a></nav><div class="flex items-center gap-2"><button class="hidden items-center gap-2 rounded-md border border-border px-3 py-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground sm:flex" type="button"><svg aria-hidden="true" class="lucide lucide-search size-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>Buscar en el archivo</button><button aria-expanded="false" aria-label="Abrir menú" class="flex size-9 items-center justify-center rounded-md border border-border lg:hidden" type="button"><svg aria-hidden="true" class="lucide lucide-menu size-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div><div class="overflow-hidden border-border/60 lg:hidden max-h-0 border-t-0"><nav class="flex flex-col gap-1 px-4 py-3"><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="index.html#guitarras">Guitarras</a><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="discografia.html">Discografía</a><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="cronologia.html">Cronología</a><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="afinaciones.html">Afinaciones</a><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="rig-bible.html">Rig Bible</a><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="vault.html">Vault</a></nav></div></header>
+<header class="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md"><div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:px-8"><a class="flex items-center gap-2.5" href="index.html"><span class="flex size-7 items-center justify-center rounded-sm bg-primary font-mono text-sm font-bold text-primary-foreground">SC</span><span class="font-mono text-sm font-medium tracking-tight">ESP Archive</span></a><nav class="hidden items-center gap-7 lg:flex"><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="index.html#guitarras">Guitarras</a><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="discografia.html">Discografía</a><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="cronologia.html">Cronología</a><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="afinaciones.html">Afinaciones</a><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="rig-bible.html">Rig Bible</a></nav><div class="flex items-center gap-2"><button class="hidden items-center gap-2 rounded-md border border-border px-3 py-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground sm:flex" type="button"><svg aria-hidden="true" class="lucide lucide-search size-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>Buscar en el archivo</button><button aria-expanded="false" aria-label="Abrir menú" class="flex size-9 items-center justify-center rounded-md border border-border lg:hidden" type="button"><svg aria-hidden="true" class="lucide lucide-menu size-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div><div class="overflow-hidden border-border/60 lg:hidden max-h-0 border-t-0"><nav class="flex flex-col gap-1 px-4 py-3"><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="index.html#guitarras">Guitarras</a><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="discografia.html">Discografía</a><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="cronologia.html">Cronología</a><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="afinaciones.html">Afinaciones</a><a class="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground" href="rig-bible.html">Rig Bible</a></nav></div></header>
 <main><section class="tunings-section">
 <a class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground" href="index.html">← Volver a Home</a>
 <div class="tunings-header" style="margin-top:32px">
@@ -60,92 +63,92 @@ h1{font-size:2rem !important}
 </div>
 <div class="tunings-timeline">
 <div class="tuning-card">
-  <div class="album-year-block"><span class="album-year-big">1995</span><span class="album-strings">6 cuerdas</span></div>
+  <div class="album-year-block"><img class="album-cover" src="images/albums/adrenaline.jpg" alt="Portada del álbum"/><span class="album-year-big">1995</span><span class="album-strings">6 cuerdas</span></div>
   <div class="tuning-card-body">
-    <div class="tuning-card-top"><h3 id="album-adrenaline" class="tuning-name" style="margin:0">Adrenaline</h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
+    <div class="tuning-card-top"><h3 id="album-adrenaline" class="tuning-name" style="margin:0"><a href="https://en.wikipedia.org/wiki/Adrenaline_(album)" target="_blank" rel="noopener noreferrer" class="album-wiki-link">Adrenaline</a></h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
     <p class="tuning-strings" style="margin-bottom:14px">Afinación: Estándar / Drop C#</p>
     <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/esp-mirage.html">ESP Mirage Custom Pearl White</a></p></div></div>
     <p class="tuning-note">Álbum debut de Deftones. La ESP Mirage Custom Pearl White fue la herramienta principal de esta etapa fundacional.</p>
   </div>
 </div>
 <div class="tuning-card">
-  <div class="album-year-block"><span class="album-year-big">1997</span><span class="album-strings">6 cuerdas</span></div>
+  <div class="album-year-block"><img class="album-cover" src="images/albums/around-the-fur.jpg" alt="Portada del álbum"/><span class="album-year-big">1997</span><span class="album-strings">6 cuerdas</span></div>
   <div class="tuning-card-body">
-    <div class="tuning-card-top"><h3 id="album-around-the-fur" class="tuning-name" style="margin:0">Around The Fur</h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
+    <div class="tuning-card-top"><h3 id="album-around-the-fur" class="tuning-name" style="margin:0"><a href="https://en.wikipedia.org/wiki/Around_the_Fur" target="_blank" rel="noopener noreferrer" class="album-wiki-link">Around The Fur</a></h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
     <p class="tuning-strings" style="margin-bottom:14px">Afinación: Drop C#</p>
     <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/esp-mirage.html">ESP Mirage Custom Pearl White</a> · <a class="tuning-guitar-link" href="guitarras/esp-horizon-turquoise.html">ESP Horizon Custom Turquoise</a></p></div></div>
     <p class="tuning-note">La Horizon Turquoise se usó de forma prominente en el proceso de mezcla, consolidando la configuración H/H/S como sello distintivo.</p>
   </div>
 </div>
 <div class="tuning-card">
-  <div class="album-year-block"><span class="album-year-big">2000</span><span class="album-strings">6 cuerdas</span></div>
+  <div class="album-year-block"><img class="album-cover" src="images/albums/white-pony.jpg" alt="Portada del álbum"/><span class="album-year-big">2000</span><span class="album-strings">6 cuerdas</span></div>
   <div class="tuning-card-body">
-    <div class="tuning-card-top"><h3 id="album-white-pony" class="tuning-name" style="margin:0">White Pony</h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
+    <div class="tuning-card-top"><h3 id="album-white-pony" class="tuning-name" style="margin:0"><a href="https://en.wikipedia.org/wiki/White_Pony" target="_blank" rel="noopener noreferrer" class="album-wiki-link">White Pony</a></h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
     <p class="tuning-strings" style="margin-bottom:14px">Afinación: Drop C</p>
     <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/esp-horizon-turquoise.html">ESP Horizon Custom Turquoise</a> · <a class="tuning-guitar-link" href="guitarras/sc-500.html">LTD SC-500</a></p></div></div>
     <p class="tuning-note">Transición hacia Drop C. La Horizon Turquoise sirvió de base física para grabar múltiples pistas, con la recién lanzada LTD SC-500 como apoyo.</p>
   </div>
 </div>
 <div class="tuning-card">
-  <div class="album-year-block"><span class="album-year-big">2003</span><span class="album-strings">7 cuerdas</span></div>
+  <div class="album-year-block"><img class="album-cover" src="images/albums/deftones.jpg" alt="Portada del álbum"/><span class="album-year-big">2003</span><span class="album-strings">7 cuerdas</span></div>
   <div class="tuning-card-body">
-    <div class="tuning-card-top"><h3 id="album-deftones" class="tuning-name" style="margin:0">Deftones (álbum)</h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
+    <div class="tuning-card-top"><h3 id="album-deftones" class="tuning-name" style="margin:0"><a href="https://en.wikipedia.org/wiki/Deftones_(album)" target="_blank" rel="noopener noreferrer" class="album-wiki-link">Deftones (álbum)</a></h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
     <p class="tuning-strings" style="margin-bottom:14px">Afinación: G# estándar / Drop A#-B</p>
     <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/sc-607.html">LTD SC-607</a> · <a class="tuning-guitar-link" href="guitarras/sc-600.html">LTD SC-600</a></p></div></div>
     <p class="tuning-note">Primera incursión documentada en 7 cuerdas. La LTD SC-607 fue clave en temas como “Hexagram” y “Minerva”, afinados en Sol sostenido.</p>
   </div>
 </div>
 <div class="tuning-card">
-  <div class="album-year-block"><span class="album-year-big">2006</span><span class="album-strings">7 cuerdas</span></div>
+  <div class="album-year-block"><img class="album-cover" src="images/albums/saturday-night-wrist.jpg" alt="Portada del álbum"/><span class="album-year-big">2006</span><span class="album-strings">7 cuerdas</span></div>
   <div class="tuning-card-body">
-    <div class="tuning-card-top"><h3 id="album-saturday-night-wrist" class="tuning-name" style="margin:0">Saturday Night Wrist</h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
+    <div class="tuning-card-top"><h3 id="album-saturday-night-wrist" class="tuning-name" style="margin:0"><a href="https://en.wikipedia.org/wiki/Saturday_Night_Wrist" target="_blank" rel="noopener noreferrer" class="album-wiki-link">Saturday Night Wrist</a></h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
     <p class="tuning-strings" style="margin-bottom:14px">Afinación: F# (barítono)</p>
     <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/sc-607b.html">LTD SC-607B</a></p></div></div>
     <p class="tuning-note">La escala barítono de 27" de la SC-607B permite bajar hasta Fa sostenido sin perder nitidez de ataque.</p>
   </div>
 </div>
 <div class="tuning-card">
-  <div class="album-year-block"><span class="album-year-big">2010</span><span class="album-strings">8 cuerdas</span></div>
+  <div class="album-year-block"><img class="album-cover" src="images/albums/diamond-eyes.jpg" alt="Portada del álbum"/><span class="album-year-big">2010</span><span class="album-strings">8 cuerdas</span></div>
   <div class="tuning-card-body">
-    <div class="tuning-card-top"><h3 id="album-diamond-eyes" class="tuning-name" style="margin:0">Diamond Eyes</h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
+    <div class="tuning-card-top"><h3 id="album-diamond-eyes" class="tuning-name" style="margin:0"><a href="https://en.wikipedia.org/wiki/Diamond_Eyes" target="_blank" rel="noopener noreferrer" class="album-wiki-link">Diamond Eyes</a></h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
     <p class="tuning-strings" style="margin-bottom:14px">Afinación: F# estándar (8 cuerdas)</p>
-    <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/stef-b8.html">ESP STEF-B8 / LTD SC-608</a></p></div></div>
-    <p class="tuning-note">Inicio de la era de 8 cuerdas. La STEF-B8 / LTD SC-608 permitió estructurar riffs pesados inspirados en la pared de sonido de Meshuggah.</p>
+    <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/stef-b8.html">ESP STEF-B8</a> · <a class="tuning-guitar-link" href="guitarras/ltd-sc-608b.html">LTD SC-608B</a></p></div></div>
+    <p class="tuning-note">Inicio de la era de 8 cuerdas. La STEF-B8 permitió estructurar riffs pesados inspirados en la pared de sonido de Meshuggah.</p>
   </div>
 </div>
 <div class="tuning-card">
-  <div class="album-year-block"><span class="album-year-big">2012</span><span class="album-strings">8 cuerdas</span></div>
+  <div class="album-year-block"><img class="album-cover" src="images/albums/koi-no-yokan.jpg" alt="Portada del álbum"/><span class="album-year-big">2012</span><span class="album-strings">8 cuerdas</span></div>
   <div class="tuning-card-body">
-    <div class="tuning-card-top"><h3 id="album-koi-no-yokan" class="tuning-name" style="margin:0">Koi No Yokan</h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
+    <div class="tuning-card-top"><h3 id="album-koi-no-yokan" class="tuning-name" style="margin:0"><a href="https://en.wikipedia.org/wiki/Koi_No_Yokan" target="_blank" rel="noopener noreferrer" class="album-wiki-link">Koi No Yokan</a></h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
     <p class="tuning-strings" style="margin-bottom:14px">Afinación: Drop E</p>
-    <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/stef-b8.html">ESP STEF-B8 / LTD SC-608</a> · <a class="tuning-guitar-link" href="guitarras/stef-b8-custom.html">ESP STEF-B8 Custom Shop</a></p></div></div>
+    <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/stef-b8.html">ESP STEF-B8</a></p></div></div>
     <p class="tuning-note">Continuidad de la STEF-B8 en Drop E, afinación inspirada en Animals As Leaders (Tosin Abasi).</p>
   </div>
 </div>
 <div class="tuning-card">
-  <div class="album-year-block"><span class="album-year-big">2016</span><span class="album-strings">8 cuerdas</span></div>
+  <div class="album-year-block"><img class="album-cover" src="images/albums/gore.png" alt="Portada del álbum"/><span class="album-year-big">2016</span><span class="album-strings">8 cuerdas</span></div>
   <div class="tuning-card-body">
-    <div class="tuning-card-top"><h3 id="album-gore" class="tuning-name" style="margin:0">Gore</h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-likely/40 bg-likely/15 text-likely">Muy probable</span></div>
+    <div class="tuning-card-top"><h3 id="album-gore" class="tuning-name" style="margin:0"><a href="https://en.wikipedia.org/wiki/Gore_(Deftones_album)" target="_blank" rel="noopener noreferrer" class="album-wiki-link">Gore</a></h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-likely/40 bg-likely/15 text-likely">Muy probable</span></div>
     <p class="tuning-strings" style="margin-bottom:14px">Afinación: F# / Drop E</p>
-    <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/stef-b8.html">ESP STEF-B8 / LTD SC-608</a> · <a class="tuning-guitar-link" href="guitarras/stef-t.html">ESP STEF-T7B</a></p></div></div>
+    <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/stef-b8.html">ESP STEF-B8</a> · <a class="tuning-guitar-link" href="guitarras/stef-t.html">ESP STEF-T7B</a></p></div></div>
     <p class="tuning-note">Coincide con la actualización de electrónica de la STEF-B8 a Fishman Fluence; uso probable de la STEF-T7B en giras de la época.</p>
   </div>
 </div>
 <div class="tuning-card">
-  <div class="album-year-block"><span class="album-year-big">2020</span><span class="album-strings">9 cuerdas</span></div>
+  <div class="album-year-block"><img class="album-cover" src="images/albums/ohms.png" alt="Portada del álbum"/><span class="album-year-big">2020</span><span class="album-strings">9 cuerdas</span></div>
   <div class="tuning-card-body">
-    <div class="tuning-card-top"><h3 id="album-ohms" class="tuning-name" style="margin:0">Ohms</h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
+    <div class="tuning-card-top"><h3 id="album-ohms" class="tuning-name" style="margin:0"><a href="https://en.wikipedia.org/wiki/Ohms_(album)" target="_blank" rel="noopener noreferrer" class="album-wiki-link">Ohms</a></h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-confirmed/40 bg-confirmed/15 text-confirmed">Confirmado</span></div>
     <p class="tuning-strings" style="margin-bottom:14px">Afinación: C# estándar (9 cuerdas)</p>
-    <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/esp-9-string.html">ESP Custom Shop 9-String</a></p></div></div>
-    <p class="tuning-note">La guitarra Custom Shop de 9 cuerdas, construida específicamente para este álbum, protagoniza “The Spell of Mathematics” en Do sostenido grave.</p>
+    <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/esp-9-string.html">ESP Custom Shop 9-String</a> · <a class="tuning-guitar-link" href="guitarras/stef-b8.html">ESP STEF-B8</a></p></div></div>
+    <p class="tuning-note">La guitarra Custom Shop de 9 cuerdas, construida específicamente para este álbum, protagoniza “The Spell of Mathematics” en Do sostenido grave. El resto del disco se apoya en la STEF-B8 estándar de 8 cuerdas.</p>
   </div>
 </div>
 <div class="tuning-card">
-  <div class="album-year-block"><span class="album-year-big">2025</span><span class="album-strings">7 / 8 cuerdas</span></div>
+  <div class="album-year-block"><img class="album-cover" src="images/albums/private-music.jpg" alt="Portada del álbum"/><span class="album-year-big">2025</span><span class="album-strings">7 / 8 cuerdas</span></div>
   <div class="tuning-card-body">
-    <div class="tuning-card-top"><h3 id="album-private-music" class="tuning-name" style="margin:0">Private Music</h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-likely/40 bg-likely/15 text-likely">Muy probable</span></div>
+    <div class="tuning-card-top"><h3 id="album-private-music" class="tuning-name" style="margin:0"><a href="https://en.wikipedia.org/wiki/Private_Music_(album)" target="_blank" rel="noopener noreferrer" class="album-wiki-link">Private Music</a></h3><span class="inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider border-likely/40 bg-likely/15 text-likely">Muy probable</span></div>
     <p class="tuning-strings" style="margin-bottom:14px">Canciones clave: "My Mind Is a Mountain", "Infinite Source", "Milk of the Madonna"</p>
-    <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/kiesel-vader-7.html">Kiesel Vader Signature (7c)</a> · <a class="tuning-guitar-link" href="guitarras/kiesel-vader-8.html">Kiesel Vader Signature (8c)</a></p></div></div>
+    <div class="tuning-meta" style="grid-template-columns:1fr"><div><span class="tuning-meta-label">Guitarras usadas</span><p><a class="tuning-guitar-link" href="guitarras/kiesel-vader-7.html">Kiesel Vader Signature (7c)</a> · <a class="tuning-guitar-link" href="guitarras/kiesel-vader-8.html">Kiesel Vader Signature (8c)</a> · <a class="tuning-guitar-link" href="guitarras/ltd-sc-608b.html">LTD SC-608B ("Chiquita")</a></p></div></div>
     <p class="tuning-note">Lanzado el 22 de agosto de 2025. Marca el giro hacia paisajes sonoros meditativos y ambientales. Carpenter aportó riffs y producción, pero Chino Moreno ejecutó gran parte de las guitarras debido a los problemas de salud (diabetes tipo 2) de Stef, revelados públicamente ese mismo año.</p>
   </div>
 </div>
@@ -160,7 +163,7 @@ h1{font-size:2rem !important}
 <li><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="afinaciones.html">Afinaciones</a></li>
 <li><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="cronologia.html">Cronología</a></li>
 <li><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="rig-bible.html">Equipo</a></li>
-<li><a class="text-sm text-muted-foreground transition-colors hover:text-foreground" href="vault.html">Vault</a></li>
+<li></li>
 </ul>
 </div>
 <div>
