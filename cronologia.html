@@ -47,16 +47,18 @@ h1{font-size:2rem !important}
 .hcron-intro{margin-bottom:8px}
 .hcron-hint{display:flex;align-items:center;gap:8px;margin:20px 0 24px;font-size:.875rem;color:#8a8a8e}
 .hcron-hint svg{width:18px;height:18px;color:#dc2626}
-.hcron-scroll{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;padding-bottom:20px;margin:0 -16px;padding-left:16px;padding-right:16px;-webkit-overflow-scrolling:touch}
+.hcron-scroll{overflow-x:auto;overflow-y:visible;scroll-snap-type:x proximity;padding-bottom:20px;margin:0 -16px;padding-left:16px;padding-right:16px;-webkit-overflow-scrolling:touch}
 .hcron-scroll::-webkit-scrollbar{height:10px}
 .hcron-scroll::-webkit-scrollbar-track{background:#141416;border-radius:10px}
 .hcron-scroll::-webkit-scrollbar-thumb{background:#3a3a3e;border-radius:10px}
 .hcron-scroll::-webkit-scrollbar-thumb:hover{background:#dc2626}
-.hcron-track{display:flex;align-items:stretch;min-width:max-content;position:relative}
+.hcron-track{display:flex;align-items:stretch;min-width:max-content;position:relative;padding-top:215px}
 .hcron-col{flex:0 0 240px;display:flex;flex-direction:column;justify-content:flex-end;scroll-snap-align:start;position:relative;padding:0 10px;border-right:1px solid #202023}
 .hcron-col:first-child{padding-left:0}
 .hcron-cards{display:flex;flex-direction:column;gap:10px;min-height:190px;justify-content:flex-end;padding-bottom:24px}
-.hcron-card{display:block;border:1px solid #2a2a2e;background:#151517;border-radius:10px;padding:14px;text-decoration:none;transition:border-color .2s,transform .2s}
+.hcron-card{display:block;position:relative;border:1px solid #2a2a2e;background:#151517;border-radius:10px;padding:14px;text-decoration:none;transition:border-color .2s,transform .2s}
+.hcron-thumb{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(6px);width:161px;height:195px;object-fit:contain;background:#0d0d0f;border:1px solid #2a2a2e;border-radius:10px;padding:8px;box-shadow:0 12px 28px rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;z-index:20}
+.hcron-card:hover .hcron-thumb{opacity:1;transform:translateX(-50%) translateY(0)}
 .hcron-card:hover{border-color:#dc2626;transform:translateY(-2px)}
 .hcron-card-name{display:block;font-size:1rem;font-weight:700;color:#f0f0f2;line-height:1.3;margin-bottom:8px}
 .hcron-meta-line{display:block;font-size:.9375rem;color:#c4c4c8;line-height:1.6}
@@ -78,122 +80,122 @@ h1{font-size:2rem !important}
 <div class="hcron-hint"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Desliza para ver más</div>
 <div class="hcron-scroll"><div class="hcron-track">
 <div class="hcron-col era-e1">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/esp-mirage.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/esp-mirage.html"><img class="hcron-thumb" src="images/real/esp-mirage-1.png" alt=""/>
   <span class="hcron-card-name">ESP Mirage Custom Pearl White</span>
   <span class="hcron-meta-line">Adrenaline</span><span class="hcron-meta-line">Drop C# / estándar</span>
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">1994</span></div>
 </div>
 <div class="hcron-col era-e1">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/esp-horizon-turquoise.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/esp-horizon-turquoise.html"><img class="hcron-thumb" src="images/real/esp-horizon-turquoise-1.png" alt=""/>
   <span class="hcron-card-name">ESP Horizon Custom Turquoise</span>
   <span class="hcron-meta-line">Around The Fur</span><span class="hcron-meta-line">Drop C# / Drop C</span>
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">1997</span></div>
 </div>
 <div class="hcron-col era-e1">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/sc-original.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/sc-original.html"><img class="hcron-thumb" src="images/real/sc-original-1.png" alt=""/>
   <span class="hcron-card-name">ESP Stephen Carpenter Signature</span>
   <span class="hcron-meta-line">Around The Fur</span><span class="hcron-meta-line">Drop C#</span>
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">1998</span></div>
 </div>
 <div class="hcron-col era-e1">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/esp-src-6.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/esp-src-6.html"><img class="hcron-thumb" src="images/real/esp-src-6-1.png" alt=""/>
   <span class="hcron-card-name">ESP SRC-6 Custom Shop</span>
   
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">1999</span></div>
 </div>
 <div class="hcron-col era-e1">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/sc-500.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/sc-500.html"><img class="hcron-thumb" src="images/real/ltd-sc-500-black-1.png" alt=""/>
   <span class="hcron-card-name">LTD SC-500</span>
   <span class="hcron-meta-line">White Pony</span><span class="hcron-meta-line">Drop C</span>
-</a><a class="hcron-card" href="guitarras/esp-src-7.html">
+</a><a class="hcron-card" href="guitarras/esp-src-7.html"><img class="hcron-thumb" src="images/real/esp-src-7-1.png" alt=""/>
   <span class="hcron-card-name">ESP SRC-7 Custom Shop</span>
   
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">2001</span></div>
 </div>
 <div class="hcron-col era-e1">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/ltd-sc-200.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/ltd-sc-200.html"><img class="hcron-thumb" src="images/real/ltd-sc-200-green-1.png" alt=""/>
   <span class="hcron-card-name">LTD SC-200</span>
   
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">2002</span></div>
 </div>
 <div class="hcron-col era-e2">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/sc-600.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/sc-600.html"><img class="hcron-thumb" src="images/real/ltd-sc-600-burst-1.png" alt=""/>
   <span class="hcron-card-name">LTD SC-600</span>
   <span class="hcron-meta-line">Deftones (álbum, 2003)</span><span class="hcron-meta-line">Drop C</span>
-</a><a class="hcron-card" href="guitarras/sc-607.html">
+</a><a class="hcron-card" href="guitarras/sc-607.html"><img class="hcron-thumb" src="images/real/ltd-sc-607-natural-1.png" alt=""/>
   <span class="hcron-card-name">LTD SC-607</span>
   <span class="hcron-meta-line">Deftones (álbum)</span><span class="hcron-meta-line">G# (Sol sostenido estándar 7 cuerdas)</span>
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">2003</span></div>
 </div>
 <div class="hcron-col era-e2">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/sc-607b.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/sc-607b.html"><img class="hcron-thumb" src="images/real/ltd-sc-607b-magenta-1.png" alt=""/>
   <span class="hcron-card-name">LTD SC-607B</span>
   <span class="hcron-meta-line">Saturday Night Wrist</span><span class="hcron-meta-line">F# (Fa sostenido)</span>
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">2004</span></div>
 </div>
 <div class="hcron-col era-e3">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/stef-b8.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/stef-b8.html"><img class="hcron-thumb" src="images/real/stef-b8-black-1.png" alt=""/>
   <span class="hcron-card-name">ESP STEF-B8</span>
   <span class="hcron-meta-line">Diamond Eyes</span><span class="hcron-meta-line">F# estándar 8 cuerdas</span>
-</a><a class="hcron-card" href="guitarras/ltd-sc-608b.html">
+</a><a class="hcron-card" href="guitarras/ltd-sc-608b.html"><img class="hcron-thumb" src="images/real/ltd-sc-608b-black-1.png" alt=""/>
   <span class="hcron-card-name">LTD SC-608B</span>
   <span class="hcron-meta-line">Diamond Eyes</span><span class="hcron-meta-line">F# estándar 8 cuerdas</span>
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">2010</span></div>
 </div>
 <div class="hcron-col era-e3">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/esp-stef-b7.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/esp-stef-b7.html"><img class="hcron-thumb" src="images/real/stef-b7-fishman-black-1.png" alt=""/>
   <span class="hcron-card-name">ESP STEF-B7</span>
   <span class="hcron-meta-line">B tuning</span>
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">2012</span></div>
 </div>
 <div class="hcron-col era-e3">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/ltd-sc-337.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/ltd-sc-337.html"><img class="hcron-thumb" src="images/real/ltd-sc-337-1.png" alt=""/>
   <span class="hcron-card-name">LTD SC-337</span>
   
-</a><a class="hcron-card" href="guitarras/stef-t.html">
+</a><a class="hcron-card" href="guitarras/stef-t.html"><img class="hcron-thumb" src="images/real/esp-stef-t7b-1.png" alt=""/>
   <span class="hcron-card-name">ESP STEF-T7B</span>
   <span class="hcron-meta-line">Gore</span><span class="hcron-meta-line">F#</span>
-</a><a class="hcron-card" href="guitarras/ltd-sc-338.html">
+</a><a class="hcron-card" href="guitarras/ltd-sc-338.html"><img class="hcron-thumb" src="images/real/ltd-sc-338-1.png" alt=""/>
   <span class="hcron-card-name">LTD SC-338</span>
   <span class="hcron-meta-line">F#</span>
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">2013</span></div>
 </div>
 <div class="hcron-col era-e3">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/ltd-sct-607b.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/ltd-sct-607b.html"><img class="hcron-thumb" src="images/real/ltd-sct-607b-green-1.png" alt=""/>
   <span class="hcron-card-name">LTD SCT-607B</span>
   <span class="hcron-meta-line">Gore</span><span class="hcron-meta-line">F# / B tuning</span>
-</a><a class="hcron-card" href="guitarras/sc-20.html">
+</a><a class="hcron-card" href="guitarras/sc-20.html"><img class="hcron-thumb" src="images/real/sc-20-green-1.png" alt=""/>
   <span class="hcron-card-name">LTD SC-20 20th Anniversary</span>
   <span class="hcron-meta-line">Around The Fur / White Pony (recreación histórica)</span><span class="hcron-meta-line">Drop C</span>
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">2018</span></div>
 </div>
 <div class="hcron-col era-e3">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/ltd-sc-607b1h.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/ltd-sc-607b1h.html"><img class="hcron-thumb" src="images/real/ltd-sc-607b1h-purple-1.png" alt=""/>
   <span class="hcron-card-name">LTD SC-607B1H</span>
   <span class="hcron-meta-line">F#</span>
-</a><a class="hcron-card" href="guitarras/esp-9-string.html">
+</a><a class="hcron-card" href="guitarras/esp-9-string.html"><img class="hcron-thumb" src="images/real/esp-9-string-purple-1.png" alt=""/>
   <span class="hcron-card-name">ESP Custom Shop 9-String</span>
   <span class="hcron-meta-line">Ohms</span><span class="hcron-meta-line">C#-F#-B-E-A-D-G-B-E</span>
 </a></div>
   <div class="hcron-axis-point"><span class="hcron-year">2019</span></div>
 </div>
 <div class="hcron-col era-e3">
-  <div class="hcron-cards"><a class="hcron-card" href="guitarras/kiesel-vader-7.html">
+  <div class="hcron-cards"><a class="hcron-card" href="guitarras/kiesel-vader-7.html"><img class="hcron-thumb" src="images/real/kiesel-vader-7-camo-1.png" alt=""/>
   <span class="hcron-card-name">Kiesel Vader Signature (7 cuerdas, Headless)</span>
   <span class="hcron-meta-line">Private Music</span>
-</a><a class="hcron-card" href="guitarras/kiesel-vader-8.html">
+</a><a class="hcron-card" href="guitarras/kiesel-vader-8.html"><img class="hcron-thumb" src="images/real/kiesel-vader-8-shadow-1.png" alt=""/>
   <span class="hcron-card-name">Kiesel Vader Signature (8 cuerdas, Headless)</span>
   <span class="hcron-meta-line">Private Music</span>
 </a></div>
